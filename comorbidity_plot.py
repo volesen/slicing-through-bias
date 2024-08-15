@@ -89,6 +89,7 @@ def load_dataset(path, dataset):
 ## Clustering algorithms
 
 
+
 class GMM(BaseEstimator, TransformerMixin):
     cluster_array: np.ndarray = None
     _n_components: int = None
@@ -295,7 +296,7 @@ def plot_comorbidity_distribution(label_df, cluster_df, comorbidities, wrt_mean=
 
 
 def main(path, dataset, disease, case, drain, output):
-    df, nn_128_embeddings = load_dataset(
+    df, _, nn_128_embeddings = load_dataset(
         path, dataset
     )
 

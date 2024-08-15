@@ -1,5 +1,5 @@
 import os
-from typing import Literal
+from typing import Literal, Optional
 
 import pandas as pd
 
@@ -10,7 +10,7 @@ def load_nih(
     root_dir: str,
     split: Split = "test",
     version: int = 0,
-    embedding_size: int | None = None,
+    embedding_size: Optional[int] = None,
 ):
     # Load labels
     nih_labels_df = pd.read_csv(
